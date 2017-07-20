@@ -5,7 +5,9 @@
 ####
 
 # names for the output folder and workspace file
+qmiseq.out.00 <- "00_QMiSeq_Figures"
 qmiseq.out.01 <- "01_QMiSeq_StdEvalOut"
+dir.create(qmiseq.out.00, showWarnings = FALSE)
 dir.create(qmiseq.out.01, showWarnings = FALSE)
 ws.out.01 <- file.path(qmiseq.out.01, "01_QMiSeq_StdEvalOut.RData")
 
@@ -79,7 +81,7 @@ read.std$copy_fac <- factor(read.std$copy, levels=c("25","50","100","250","500")
 f2b <- ggplot(read.std, aes(x = copy_fac, y = value, color = slope))
 f2b <- f2b + geom_jitter(shape=16, position = position_jitter(0.2), size = 0.7, alpha=0.5)
 f2b <- PlotStyle(f2b) +  scale_colour_gradient2(low = "black", mid = "red3", high = "red3", midpoint = 30)
-f2b <- f2b  + xlab(expression(paste("Copy number of standard DNA (", {µl}^-1, ")")))
+f2b <- f2b  + xlab(expression(paste("Copy numbers of standard DNA (", {µl}^-1, ")")))
 f2b <- f2b + ylab("Sequence reads") + theme(legend.position = c(0.2, 0.65))
 f2b <- f2b + scale_y_continuous(labels = scales::comma)
 
@@ -98,10 +100,9 @@ f2d <- PlotStyle(f2d) + xlim(-3,60) + geom_hline(yintercept = 0)
 f2d <- f2d + xlab("Slope") + ylab("Count")
 
 # output figures
-dev.off()
 quartz(width = 8.5, height = 6) # quartz function is only for Mac
 plot_grid(f2a, f2b, f2c, f2d, ncol=2, align="hv", labels=c("a","b","c","d"))
-fig2.name <- file.path(qmiseq.out.01, "Figure1.png")
+fig2.name <- file.path(qmiseq.out.00, "Figure2.png")
 quartz.save(fig2.name)
 
 # save results
