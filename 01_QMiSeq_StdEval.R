@@ -61,7 +61,7 @@ d.f2a <- melt(data.frame(copy = c(std.copy.1ul, 0),
 f2a <- ggplot(d.f2a, aes(x = copy, y = value, group = variable, label = variable, colour = variable))
 f2a <- f2a + geom_point(size = 2) + xlim(-20,520) + scale_color_manual(name = "Regression slope", values = c("red3", "darkred", "black"))
 f2a <- f2a + geom_smooth(method = "lm", size = 0.5, se = F)
-f2a <- f2a + xlab(expression(paste("Copy numbers of standard DNA (", {µl}^-1, ")")))
+f2a <- f2a  + xlab(expression(paste("Copy numbers of standard DNA (", mu, l^-1, ")")))
 f2a <- f2a + ylab("Sequence reads")
 f2a <- f2a + scale_y_continuous(labels = scales::comma)
 f2a <- PlotStyle(f2a) + theme(legend.position = c(0.25, 0.75))
