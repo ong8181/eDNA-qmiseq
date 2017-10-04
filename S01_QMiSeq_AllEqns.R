@@ -55,14 +55,14 @@ colnames(d.a2) <- c("copy", "date", "residual")
 fs1 <- ggplot(d.a1, aes(x = copy, y = reads, group = date))
 fs1 <- fs1 + geom_point() + facet_wrap(~date)
 fs1 <- fs1 + geom_smooth(method = "lm", se = F, size = 0.8, formula = y ~ x + 0)
-fs1 <- fs1 + xlab(expression(paste("The copy number of standard DNA (copies ", mu, l^-1, ")")))
+fs1 <- fs1 + xlab(expression(paste("Copy numbers of standard DNA (copies ", mu, l^-1, ")")))
 fs1 <- fs1 + ylab("Sequence reads of standard DNA")
 fs1 <- fs1 + theme_bw()
 
 # visualize all residuals
 fs2 <- ggplot(d.a2, aes(x = copy, y = residual, group = date))
 fs2 <- fs2 + geom_point() + facet_wrap(~date) + geom_hline(yintercept = 0, linetype = 2)
-fs2 <- fs2 + xlab(expression(paste("The copy number of standard DNA (copies ", mu, l^-1, ")")))
+fs2 <- fs2 + xlab(expression(paste("Copy numbers of standard DNA (copies ", mu, l^-1, ")")))
 fs2 <- fs2 + ylab("Residuals of the regression")
 fs2 <- fs2 + theme_bw()
 
