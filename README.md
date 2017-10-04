@@ -2,6 +2,6 @@
 The files contain R codes and data to reproduce figures in Ushio et al. (2017) bioRxiv (https://doi.org/10.1101/113472).
 
 # Required R packages
-Following packages are required: ggplot2, cowplot, reshape2, scales
+Following packages are required: ggplot2, cowplot, reshape2, scales, BlandAltmanLeh
 
 All packages can be installed from CRAN.
