@@ -81,7 +81,7 @@ read.std$copy_fac <- factor(read.std$copy, levels=c("25","50","100","250","500")
 f2b <- ggplot(read.std, aes(x = copy_fac, y = value, color = slope))
 f2b <- f2b + geom_jitter(shape=16, position = position_jitter(0.2), size = 0.7, alpha=0.5)
 f2b <- PlotStyle(f2b) +  scale_colour_gradient2(low = "black", mid = "red3", high = "red3", midpoint = 30)
-f2b <- f2b  + xlab(expression(paste("Copy numbers of standard DNA (", {µl}^-1, ")")))
+f2b <- f2b  + xlab(expression(paste("Copy numbers of standard DNA (", mu, l^-1, ")")))
 f2b <- f2b + ylab("Sequence reads") + theme(legend.position = c(0.2, 0.65))
 f2b <- f2b + scale_y_continuous(labels = scales::comma)
 
