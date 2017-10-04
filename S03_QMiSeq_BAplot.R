@@ -77,7 +77,7 @@ fs5b <- fs5b + annotate("text", x = -Inf, y = Inf, hjust = -0.2, vjust = 1.8, pa
                         label = sprintf("R^2 == %0.3f", cor.s2^2))
 
 fs5c <- ggplot(log.d.comp, aes(y = tra_qmiseq, x = tra_qpcr, color = slope))
-fs5c <- fs5c + geom_point() + labs(title = "Japanese Jack meckerel")
+fs5c <- fs5c + geom_point() + labs(title = "Japanese jack mackerel")
 fs5c <- PlotStyle4(fs5c) + geom_smooth(method = "lm", color = "black", se = F, size = 0.5) 
 fs5c <- PlotStyle(fs5c) + theme(legend.position = "none")
 fs5c <- fs5c + annotate("text", x = -Inf, y = Inf, hjust = -0.2, vjust = 1.8, parse = T,
