@@ -44,7 +44,7 @@ library(cowplot)
 library(reshape2)
 
 # load helper functions
-source("functions/S1_HelperFuncs.R")
+source("functions/HelperFuncs.R")
 
 # make ggplot objects
 # Figure 2a (max, median, and minimum slope regressions)
