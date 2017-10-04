@@ -56,24 +56,6 @@ f4c <- f4c + theme(legend.position = c(0.1, 0.8), legend.text = element_text(siz
 f4c <- f4c + ylab(expression(paste("eDNA (copies ", {µl}^-1, ")")))
 f4c <- f4c + xlab("Sampling date") + scale_x_datetime(labels = date_format('%Y-%m'))
 
-
-if(F){
-# Bland-Altman plot (difference plot)
-library(BlandAltmanLeh)
-
-# total eDNA
-ba1 <- bland.altman.stats(d.comp$norm_total_qmiseq, d.comp$norm_total_qpcr)
-bland.altman.plot(d.comp$norm_total_qmiseq, d.comp$norm_total_qpcr)
-
-# Enguraulis japonicus eDNA
-ba2 <- bland.altman.stats(d.comp$eng_qmiseq, d.comp$eng_qpcr)
-bland.altman.plot(d.comp$eng_qmiseq, d.comp$eng_qpcr)
-
-# Trachurus japonicus eDNA
-ba3 <- bland.altman.stats(d.comp$tra_qmiseq, d.comp$tra_qpcr)
-bland.altman.plot(d.comp$tra_qmiseq, d.comp$tra_qpcr)
-}
-
 # output figure
 dev.off()
 quartz(width = 6, height = 7) # quartz function is only for Mac
