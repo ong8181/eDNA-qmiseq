@@ -15,7 +15,7 @@ ws.out.02 <- file.path(qmiseq.out.02, "02_QMiSeq_ConversionOut.RData")
 load(ws.out.01)
 
 # load functions
-source("functions/S1_HelperFuncs.R")
+source("functions/HelperFuncs.R")
 
 # convert reads 
 converted.reads <- data.frame()
