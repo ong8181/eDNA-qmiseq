@@ -59,7 +59,7 @@ fs4a <- fs4a + labs(title = "Total fish DNA") + theme_bw()
 fs4b <- bland.altman.plot(d.comp$eng_qmiseq, d.comp$eng_qpcr, graph.sys = "ggplot2")
 fs4b <- fs4b + labs(title = "Japanese anchovy") + theme_bw()
 fs4c <- bland.altman.plot(d.comp$tra_qmiseq, d.comp$tra_qpcr, graph.sys = "ggplot2")
-fs4c <- fs4c + labs(title = "Japanese Jack meckerel") + theme_bw()
+fs4c <- fs4c + labs(title = "Japanese jack mackerel") + theme_bw()
 
 # log-transformed values 
 fs5a <- ggplot(log.d.comp, aes(y = total_qmiseq, x = total_qpcr, colour = slope))
@@ -88,7 +88,7 @@ fs5d <- fs5d + labs(title = "Total fish DNA") + theme_bw()
 fs5e <- bland.altman.plot(log.d.comp$eng_qmiseq, log.d.comp$eng_qpcr, graph.sys = "ggplot2")
 fs5e <- fs5e + labs(title = "Japanese anchovy") + theme_bw()
 fs5f <- bland.altman.plot(log.d.comp$tra_qmiseq, log.d.comp$tra_qpcr, graph.sys = "ggplot2")
-fs5f <- fs5f + labs(title = "Japanese Jack meckerel") + theme_bw()
+fs5f <- fs5f + labs(title = "Japanese jack mackerel") + theme_bw()
 
 
 
