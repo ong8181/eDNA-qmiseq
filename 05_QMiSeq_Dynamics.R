@@ -33,8 +33,9 @@ f4a <- ggplot(d.comp.ts1, aes(x = date, y = value, group = variable))
 f4a <- f4a + geom_line(aes(linetype = variable), size = 0.5)
 f4a <- PlotStyle(f4a) + scale_linetype_discrete(name = NULL, labels = c("qMiSeq", "qPCR"))
 f4a <- f4a + theme(legend.position = c(0.1, 0.8), legend.text = element_text(size = 12))
-f4a <- f4a + ylab(expression(paste("Normalized eDNA (copies ", {µl}^-1, ")")))
+f4a <- f4a + ylab(expression(paste("Normalized eDNA (copies", mu, l^-1, ")")))
 f4a <- f4a + xlab("Sampling date") + scale_x_datetime(labels = date_format('%Y-%m'))
+
 
 # Engraulis japonicus (qMiSeq and qPCR)
 d.comp.ts2 <- melt(d.comp[,c("date", "eng_qmiseq", "eng_qpcr")],
@@ -43,7 +44,7 @@ f4b <- ggplot(d.comp.ts2, aes(x = date, y = value, group = variable))
 f4b <- f4b + geom_line(aes(linetype = variable), size = 0.5)
 f4b <- PlotStyle(f4b) + scale_linetype_discrete(name = NULL, labels = c("qMiSeq", "qPCR"))
 f4b <- f4b + theme(legend.position = c(0.1, 0.8), legend.text = element_text(size = 12))
-f4b <- f4b + ylab(expression(paste("eDNA (copies ", {µl}^-1, ")")))
+f4b <- f4b + ylab(expression(paste("eDNA (copies", mu, l^-1, ")")))
 f4b <- f4b + xlab("Sampling date") + scale_x_datetime(labels = date_format('%Y-%m'))
 
 # Trachurus japonicus (qMiSeq and qPCR)
@@ -53,7 +54,7 @@ f4c <- ggplot(d.comp.ts3, aes(x = date, y = value, group = variable))
 f4c <- f4c + geom_line(aes(linetype = variable), size = 0.5)
 f4c <- PlotStyle(f4c) + scale_linetype_discrete(name = NULL, labels = c("qMiSeq", "qPCR"))
 f4c <- f4c + theme(legend.position = c(0.1, 0.8), legend.text = element_text(size = 12))
-f4c <- f4c + ylab(expression(paste("eDNA (copies ", {µl}^-1, ")")))
+f4c <- f4c + ylab(expression(paste("eDNA (copies", mu, l^-1, ")")))
 f4c <- f4c + xlab("Sampling date") + scale_x_datetime(labels = date_format('%Y-%m'))
 
 # output figure
