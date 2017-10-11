@@ -99,7 +99,7 @@ figS4.name <- file.path(qmiseq.out.00, "FigureS4.png")
 quartz.save(figS4.name)
 
 dev.off()
-quartz(width = 8.5, height = 6) # quartz function is only for Mac
+quartz(width = 8.8, height = 6) # quartz function is only for Mac
 plot_grid(fs5a, fs5b, fs5c,
           fs5d, fs5e, fs5f, ncol=3, align="hv", labels=c("a","b","c","d","e","f"))
 figS5.name <- file.path(qmiseq.out.00, "FigureS5.png")
