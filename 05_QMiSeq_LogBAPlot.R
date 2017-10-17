@@ -76,7 +76,7 @@ f4d <- f4d + labs(title = "Total fish DNA") + theme_bw()
 f4e <- bland.altman.plot(log.d.comp$eng_qmiseq, log.d.comp$eng_qpcr, graph.sys = "ggplot2")
 f4e <- f4e + labs(title = "Japanese anchovy") + theme_bw()
 f4f <- bland.altman.plot(log.d.comp$tra_qmiseq, log.d.comp$tra_qpcr, graph.sys = "ggplot2")
-f4f <- f4f + labs(title = "Japanese Jack mackerel") + theme_bw()
+f4f <- f4f + labs(title = "Japanese jack mackerel") + theme_bw()
 
 
 
