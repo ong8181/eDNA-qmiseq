@@ -65,7 +65,7 @@ f4b <- f4b + annotate("text", x = -Inf, y = Inf, hjust = -0.2, vjust = 1.8, pars
                         label = sprintf("R^2 == %0.3f", cor.s2^2))
 
 f4c <- ggplot(log.d.comp, aes(y = tra_qmiseq, x = tra_qpcr, color = slope))
-f4c <- f4c + geom_point() + labs(title = "Japanese Jack meckerel")
+f4c <- f4c + geom_point() + labs(title = "Japanese Jack mackerel")
 f4c <- PlotStyle4(f4c) + geom_smooth(method = "lm", color = "black", se = F, size = 0.5) 
 f4c <- PlotStyle(f4c) + theme(legend.position = "none")
 f4c <- f4c + annotate("text", x = -Inf, y = Inf, hjust = -0.2, vjust = 1.8, parse = T,
@@ -76,7 +76,7 @@ f4d <- f4d + labs(title = "Total fish DNA") + theme_bw()
 f4e <- bland.altman.plot(log.d.comp$eng_qmiseq, log.d.comp$eng_qpcr, graph.sys = "ggplot2")
 f4e <- f4e + labs(title = "Japanese anchovy") + theme_bw()
 f4f <- bland.altman.plot(log.d.comp$tra_qmiseq, log.d.comp$tra_qpcr, graph.sys = "ggplot2")
-f4f <- f4f + labs(title = "Japanese Jack meckerel") + theme_bw()
+f4f <- f4f + labs(title = "Japanese Jack mackerel") + theme_bw()
 
 
 
