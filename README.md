@@ -1,7 +1,7 @@
 # Liscence
 This R code is released under the MIT License, see LICENSE file.
 
-# Analysis codes for "Quantitative monitoring of multispecies fish environmental DNA using high-throughput sequencing"
+# Analysis scripts for "Quantitative monitoring of multispecies fish environmental DNA using high-throughput sequencing"
 The files contain R codes and data to reproduce figures in Ushio et al. (2018) Metabarcoding & Metagenomics 2:e23297 (http://dx.doi.org/10.3897/mbmg.2.23297).
 
 # Required R packages
